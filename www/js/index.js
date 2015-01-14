@@ -1,5 +1,3 @@
-app.initialize();
-
 $(document).on( "mobileinit", function() {
     $.mobile.defaultPageTransition = "slidefade";
 }); 
@@ -44,3 +42,5 @@ var app = {
         readyElement.toggleClass('hide');
     }
 };
+
+app.initialize();
