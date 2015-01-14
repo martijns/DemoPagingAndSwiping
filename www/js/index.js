@@ -35,20 +35,19 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceReady', this.onDeviceReady, false);
+
+        $(".share").click(this.onShareClicked);
     },
     
     // deviceready Event Handler
     onDeviceReady: function() {
         $('.listening').addClass('hide');
         $('.ready').removeClass('hide');
-    }
-};
+    },
 
-// whenever the share button is clicked
-    $(".share").click(function() {
- 
+    onShareClicked: function(){
         // get the information we want to share, the url
-        var linkToShare = $(this).prev().attr('href');
+        var linkToShare = $(this).attr('href');
  
         // next we can define the webintent,
         var params = {
@@ -65,4 +64,7 @@ var app = {
         window.navigator.webkitStartActivity(intent, function(data) {
             $("#callback").text("Received from invoked intent: " + data);
         });
-    });
+    }
+};
+
+// whenever the share button is clicked
