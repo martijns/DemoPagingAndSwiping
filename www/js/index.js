@@ -43,3 +43,26 @@ var app = {
         $('.ready').removeClass('hide');
     }
 };
+
+// whenever the share button is clicked
+    $(".share").click(function() {
+ 
+        // get the information we want to share, the url
+        var linkToShare = $(this).prev().attr('href');
+ 
+        // next we can define the webintent,
+        var params = {
+            'action': 'http://webintents.org/share',
+            'type': 'text/uri-list',
+            'data': linkToShare
+        };
+ 
+        // create the intent
+        var intent = new WebKitIntent(params);
+ 
+        // start the intent, and pass in the callback
+        // that is called on succes.
+        window.navigator.webkitStartActivity(intent, function(data) {
+            $("#callback").text("Received from invoked intent: " + data);
+        });
+    });
