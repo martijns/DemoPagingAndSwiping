@@ -1,6 +1,4 @@
-$(document).ready(function(){
-    app.initialize();
-});
+app.initialize();
 
 $(document).on( "mobileinit", function() {
     $.mobile.defaultPageTransition = "slidefade";
