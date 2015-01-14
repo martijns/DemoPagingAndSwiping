@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    app.initialize();
+});
+
 $(document).on( "mobileinit", function() {
     $.mobile.defaultPageTransition = "slidefade";
 }); 
@@ -35,12 +39,7 @@ var app = {
     
     // deviceready Event Handler
     onDeviceReady: function() {
-        var listeningElement = $('.listening');
-        var readyElement = $('.ready');
-
-        listeningElement.addClass('hide');
-        readyElement.removeClass('hide');
+        $('.listening').addClass('hide');
+        $('.ready').removeClass('hide');
     }
 };
-
-app.initialize();
