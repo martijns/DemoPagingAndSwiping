@@ -13,7 +13,7 @@
     <content src="index.html" />
     <access origin="" />
 
-    <splash src="res/screen/android/splash.png" />
+    <gap:splash src="res/screen/android/splash.png" />
 	<icon src="res/screen/android/icon.png" platform="android" width="57" height="57" density="mdpi" />
 
 	<preference name="splash-screen-duration" value="10000" />
