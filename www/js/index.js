@@ -38,8 +38,8 @@ var app = {
         var listeningElement = $('.listening');
         var readyElement = $('.ready');
 
-        listeningElement.toggleClass('hide');
-        readyElement.toggleClass('hide');
+        listeningElement.addClass('hide');
+        readyElement.removeClass('hide');
     }
 };
 
