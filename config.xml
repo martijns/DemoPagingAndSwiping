@@ -17,6 +17,8 @@
     <access origin="tel:*" launch-external="yes"/>
     <access origin="sms:*" launch-external="yes"/>
 
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+
     <gap:splash src="res/screen/android/splash.png" />
 	<icon src="res/screen/android/icon.png" platform="android" width="57" height="57" density="mdpi" />
 
